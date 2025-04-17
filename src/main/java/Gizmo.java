@@ -15,6 +15,29 @@ public class Gizmo
   {
     return isElec;
   }
+
+
+  public int countElectronicsByMaker(String maker) {
+    int num = 0;
+    for (Gizmo g : purchases) {
+        if (g.isElectronic() && g.getMaker().equals(maker)) {
+            num++;
+        }
+    }
+    return num;
+}
+
+
+
+
+public boolean hasAdjacentEqualPair() {
+        for (int i = 0; i < purchases.size() - 1; i++) {
+            if (purchases.get(i).equals(purchases.get(i + 1))) {
+                return true;
+            }
+        }
+        return false;
+    }
   /** Returns true if this Gizmo is equivalent to the Gizmo
   * object represented by the
   * parameter, and false otherwise.
