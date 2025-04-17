@@ -1,23 +1,7 @@
-public class Gizmo
-{
-  private String maker;
-  private boolean isElec;
-  
-  /** Returns the name of the manufacturer of this Gizmo. */
-  public String getMaker()
-  {
-    return maker;
-  }
-  /** Returns true if this Gizmo is electronic, and false
-  * otherwise.
-  */
-  public boolean isElectronic()
-  {
-    return isElec;
-  }
 
 
-  public int countElectronicsByMaker(String maker) {
+
+public int countElectronicsByMaker(String maker) {
     int num = 0;
     for (Gizmo g : purchases) {
         if (g.isElectronic() && g.getMaker().equals(maker)) {
@@ -38,6 +22,33 @@ public boolean hasAdjacentEqualPair() {
         }
         return false;
     }
+
+
+
+
+
+
+
+public class Gizmo
+{
+  private String maker;
+  private boolean isElec;
+  
+  /** Returns the name of the manufacturer of this Gizmo. */
+  public String getMaker()
+  {
+    return maker;
+  }
+  /** Returns true if this Gizmo is electronic, and false
+  * otherwise.
+  */
+  public boolean isElectronic()
+  {
+    return isElec;
+  }
+
+
+  
   /** Returns true if this Gizmo is equivalent to the Gizmo
   * object represented by the
   * parameter, and false otherwise.
